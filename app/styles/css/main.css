@@ -1,0 +1,160 @@
+#main {
+  padding-top: 120px;
+}
+#main .menu {
+  height: 77px;
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0px 1px 14px rgba(0, 0, 0, 0.1);
+}
+#main .menu .logo {
+  display: block;
+  border-right: 1px solid #efefef;
+  margin: 18px 0px;
+  padding-right: 14px;
+}
+#main .menu .logo a {
+  position: relative;
+  width: 37px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+#main .menu .logo img {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+#main .menu .dropdown > a {
+  margin: 18px 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+#main .menu .dropdown .dropdown-menu {
+  margin: 0px;
+  min-width: 270px;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+#main .menu .dropdown .dropdown-menu:after {
+  display: block;
+  position: absolute;
+  font-family: 'Glyphicons Halflings';
+  font-size: 1.556rem;
+  color: #ffffff;
+  content: '\e253';
+  top: -14px;
+  left: 26px;
+  text-shadow: 1px 0px 0px #dbdbdb, -1px 0px 0px #dbdbdb, 0 1px 0 #ffffff, 0px -1px 0px #dbdbdb, 0px 0px #dbdbdb, 0px 0px 0px #dbdbdb, 1px 0px 0px #dbdbdb, 0px 1px 0px #dbdbdb;
+}
+#main .menu .dropdown .dropdown-menu > li > a {
+  display: block;
+  color: #666666;
+  line-height: 12px;
+  margin: 0px;
+  padding: 15px;
+  border: none;
+}
+#main .menu .dropdown .dropdown-menu > li > a:hover {
+  color: #e3472f;
+  background: #f5f5f5;
+}
+#main .menu .dropdown .navbar-menu-ico {
+  display: block;
+  font-size: 2rem;
+  color: #666666;
+  line-height: 18px;
+}
+#main .menu .search-box {
+  padding: 18px 0px;
+}
+#main .menu .search-box input {
+  color: #cacaca;
+  padding: 8px 12px;
+  box-shadow: none;
+}
+#main .menu .search-box input:focus {
+  box-shadow: none;
+  outline: none;
+}
+#main .menu .search-box input,
+#main .menu .search-box button {
+  height: 40px;
+  border: none;
+  background: #f0f0f0;
+}
+#main .menu .search-box button {
+  padding: 8px 0px 8px 12px;
+}
+#main .menu .search-box button > span {
+  font-size: 1.556rem;
+  color: #cacaca;
+}
+#main .menu .navbar-user-ctrl {
+  margin: 0px;
+  padding: 0px;
+  height: 76px;
+}
+#main .menu .navbar-user-ctrl .btn-add-post {
+  font-weight: 600;
+  color: #ffffff;
+  padding: 8px 16px;
+  background: #e3472f;
+  line-height: 22px;
+  margin: 18px 20px 18px 0px;
+}
+#main .menu .navbar-user-ctrl .btn-add-post .btn-add-post-ico {
+  float: left;
+  line-height: 22px;
+  margin-right: 16px;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown li > a,
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown li > a:hover,
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown li > a:active {
+  display: block;
+  margin: 0px;
+  padding: 18px 0px;
+  border: none;
+  background: none;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown li > a > span {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 64px;
+  background: #dbdbdb url(../../images/user-ico.png) center bottom no-repeat;
+  background-size: 34px;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown .notification-menu {
+  margin: 0px;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown .notification-menu:after {
+  width: 16px;
+  left: 89.75%;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown .notification-menu li > a {
+  margin: 0px;
+  padding: 15px;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown .notification-menu li > a:hover {
+  color: #e3472f;
+  background: #f5f5f5;
+}
+#main .menu .navbar-user-ctrl .navbar-notification-dropdown .notify {
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  padding: 3px 5px;
+  border-radius: 4px;
+  background: #e3472f;
+}
