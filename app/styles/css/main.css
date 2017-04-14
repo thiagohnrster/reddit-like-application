@@ -28,6 +28,12 @@
   left: 0px;
   width: 100%;
 }
+#main .menu .menu-toggle,
+#main .menu .search-toggle,
+#main .menu .notification-toggle,
+#main .menu .add-post-toggle {
+  display: none;
+}
 #main .menu .dropdown > a {
   margin: 18px 16px;
   padding: 10px;
@@ -70,6 +76,9 @@
   line-height: 18px;
 }
 #main .menu .search-box {
+  display: inline;
+  position: relative;
+  margin: 0px;
   padding: 18px 0px;
 }
 #main .menu .search-box input {
@@ -98,6 +107,7 @@
   margin: 0px;
   padding: 0px;
   height: 76px;
+  border: none;
 }
 #main .menu .navbar-user-ctrl .btn-add-post {
   font-weight: 600;
@@ -157,4 +167,155 @@
   padding: 3px 5px;
   border-radius: 4px;
   background: #e3472f;
+}
+#main .menu .notifications {
+  display: none;
+}
+#main .menu .navbar-menu-list-all {
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+  list-style: none;
+}
+#main .menu .navbar-menu-list-all li > ul {
+  margin: 0px -15px;
+  padding: 0px;
+  list-style: none;
+}
+#main .menu .navbar-menu-list-all ul > li > a {
+  display: block;
+  color: #666666;
+  line-height: 16px;
+  text-decoration: none;
+  margin: 0px;
+  padding: 8px 15px;
+}
+#main .menu .navbar-menu-list-all ul > li > a:hover {
+  color: #e3472f;
+  background: #f5f5f5;
+}
+#main .menu .navbar-menu-list-all .navbar-heading {
+  font-size: 1.4rem;
+  font-weight: 100;
+  color: #cbcbcb;
+  margin: 0px 0px 5px 0px;
+}
+#main .menu .navbar-menu-list-all .navbar-list-ico {
+  margin-right: 10px;
+}
+#main .menu .navbar-collapse {
+  background: #ffffff;
+  border-bottom: 1px solid #e7e7e7;
+}
+@media screen and (min-width: 240px) and (max-width: 767px) {
+  #main {
+    padding-top: 80px;
+  }
+  #main .menu {
+    height: 55px;
+  }
+  #main .menu .logo {
+    float: left;
+    margin: 10px 15px;
+    border: none;
+  }
+  #main .menu .logo a {
+    width: 31px;
+    height: 34px;
+  }
+  #main .menu .menu-toggle,
+  #main .menu .search-toggle,
+  #main .menu .notification-toggle,
+  #main .menu .add-post-toggle {
+    display: inline-block;
+    cursor: pointer;
+  }
+  #main .menu .menu-toggle {
+    font-size: 2rem;
+    line-height: 22px;
+    margin: 10px 15px 10px 7px;
+    padding: 5px 8px;
+  }
+  #main .menu .search-toggle,
+  #main .menu .notification-toggle,
+  #main .menu .add-post-toggle {
+    float: right;
+    font-size: 2rem;
+    color: #cbcbcb;
+    line-height: 24px;
+    padding: 5px 0px;
+  }
+  #main .menu .search-toggle,
+  #main .menu .notification-toggle,
+  #main .menu .add-post-toggle {
+    margin: 10px 7px;
+  }
+  #main .menu .notification-toggle {
+    position: relative;
+  }
+  #main .menu .notification-toggle .notify {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    top: 3px;
+    left: 10px;
+    padding: 3px;
+    border-radius: 4px;
+    background: #e3472f;
+  }
+  #main .menu .search-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px 15px;
+    padding: 0px;
+  }
+  #main .menu .search-box input,
+  #main .menu .search-box button {
+    height: 34px;
+    padding: 6px 8px;
+  }
+  #main .menu .navbar-user-ctrl {
+    height: auto;
+    margin: 0px -15px 15px -15px;
+    padding: 15px;
+    border-bottom: 1px solid #efefef;
+  }
+  #main .menu .navbar-user-ctrl .profile-left > span {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    background: #dbdbdb url(../../images/user-ico.png) center bottom no-repeat;
+    background-size: 24px;
+  }
+  #main .menu .navbar-user-ctrl .profile-right > span,
+  #main .menu .navbar-user-ctrl .profile-right > strong {
+    display: block;
+    font-weight: 100;
+    line-height: 16px;
+  }
+  #main .menu .navbar-user-ctrl .profile-right > span > a {
+    color: #cbcbcb;
+    text-decoration: none;
+  }
+  #main .menu .notifications {
+    display: block;
+    margin: 5px -15px;
+    padding: 0px;
+    list-style: none;
+  }
+  #main .menu .notifications li > a {
+    display: block;
+    color: #666666;
+    line-height: 16px;
+    text-decoration: none;
+    margin: 0px;
+    padding: 8px 15px;
+  }
+  #main .menu .notifications li > a:hover {
+    color: #e3472f;
+    background: #f5f5f5;
+  }
 }

@@ -3,9 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	
+	<!-- Loading the stylesheets -->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="app/styles/css/main.css" />
+	
+	<!-- Loading the scripts -->
 	<script type="text/javascript" src="vendor/jquery/3.2.0/jquery.min.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="app/scripts/scripts.js"></script>
@@ -18,7 +22,45 @@
 		<div class="container">
 			<div class="navbar-header">
 				<span class="logo clearfix"><a href="#" class="navbar-brand"><img src="app/images/logo.png" title="" alt="" /></a></span>
+				<button type="button" class="menu-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="fa fa-bars"></span>
+        </button>
+        <span class="search-toggle collapsed fa fa-search"></span>
+        <span class="notification-toggle collapsed fa fa-bell" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><i class="badge notify">5</i></span>
+        <span class="add-post-toggle collapsed fa fa-pencil"></span>
 			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="navbar-left collapse navbar-collapse collapsible" id="bs-example-navbar-collapse-1">
+				<ul class="navbar-menu-list-all nav navbar-nav visible-xs hidden-md hidden-lg">
+					<li>
+						<div class="navbar-user-ctrl media">
+							<div class="media-left profile-left"><span><a href="javascript:void(0);"><img src="" title="" alt="" /></a></span></div>
+							<div class="media-body profile-right">
+								<strong>Bem vindo</strong>
+								<span><a href="javascript:void(0);">Logout</a></span>
+							</div>
+						</div>
+					</li>
+					<li><h5 class="navbar-heading text-uppercase"><span class="fa fa-list-ul navbar-list-ico"></span>Find a category</h5>
+						<ul>
+							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Product Design</a></li>
+							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">UX Theory</a></li>
+							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Case Study</a></li>
+							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Opinion</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-left collapse navbar-collapse collapsible" id="bs-example-navbar-collapse-2">
+				<ul class="notifications">
+					<li><a href="javascript:void(0);">Notification 1</a></li>
+					<li><a href="javascript:void(0);">Notification 2</a></li>
+					<li><a href="javascript:void(0);">Notification 4</a></li>
+					<li><a href="javascript:void(0);">Notification 5</a></li>
+				</ul>
+			</div>
+			<!-- end Navbar collapse -->
 			
 			<!-- Navigation items to the left -->
 			<ul class="nav navbar-nav navbar-left visible-sm visible-md visible-lg">
@@ -32,8 +74,8 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="nav navbar-nav navbar-left col-sm-4 col-md-3 col-lg-3 visible-sm visible-md visible-lg">
-				<form name="searchForm" id="searchForm" class="search-box">
+			<div class="search-box nav navbar-nav navbar-left collapsible col-sm-4 col-md-3 col-lg-3">
+				<form name="searchForm" id="searchForm">
 					<div class="input-group">
 						<span class="input-group-btn">
 							<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
@@ -45,20 +87,20 @@
 			<!-- end Navigation items to the left -->
 
 			<!-- All user navigation items to the right -->
-			<div class="nav navbar-nav navbar-right visible-sm visible-md visible-lg">
-				<div class="navbar-user-ctrl clearfix">	
-					<a href="javascript:void(0);" class="btn btn-add-post navbar-left"><span class="btn-add-post-ico fa fa-plus"></span> Add Post</a>
-					<ul class="navbar-notification-dropdown navbar-left">
-						<li class="dropdown">
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><img src="" title="" alt="" /><i class="badge notify">5</i></a></span>
-							<ul class="dropdown-menu notification-menu">
-								<li><a href="javascript:void(0);">Notification 1</a></li>
-								<li><a href="javascript:void(0);">Notification 2</a></li>
-								<li><a href="javascript:void(0);">Notification 3</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+			<div class="navbar-user-ctrl nav navbar-nav navbar-right visible-sm visible-md visible-lg clearfix">
+				<a href="javascript:void(0);" class="btn btn-add-post navbar-left"><span class="btn-add-post-ico fa fa-plus"></span> Add Post</a>
+				<ul class="navbar-notification-dropdown navbar-left">
+					<li class="dropdown">
+						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><img src="" title="" alt="" /><i class="badge notify">5</i></a></span>
+						<ul class="dropdown-menu notification-menu">
+							<li><a href="javascript:void(0);">Notification 1</a></li>
+							<li><a href="javascript:void(0);">Notification 2</a></li>
+							<li><a href="javascript:void(0);">Notification 3</a></li>
+							<li><a href="javascript:void(0);">Notification 4</a></li>
+							<li><a href="javascript:void(0);">Notification 5</a></li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 			<!-- end User navigation items to the right -->
 
