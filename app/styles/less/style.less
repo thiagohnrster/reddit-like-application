@@ -305,6 +305,7 @@
 			.upvotes-btn { font-size: 1.4rem; border-bottom: 1px solid #dbdbdb; }
 			.upvotes-text { font-size: 2rem; font-weight: bold; }
 		}
+		.upvotes-small { display: none; }
 		.reddits-content { display: block; margin: 0px 0px 0px 68px; }
 	}
 }
@@ -412,13 +413,17 @@
 			.subject-link {	display: inline-block; font-size: 1rem; }
 			.subject-title { font-size: 1.4rem; margin: 0px; }
 			.subject-category { display: none; }
-			.subject-text-ico { font-size: 1.2rem; margin-right: 5px; }
+			.subject-text-ico { font-size: 1.2rem; margin-right: 3px; }
 			.subject-text-date { 
 				i:after { display: none; } 
 			}
 			.subject-text-comment { display: none; }
 			.subject-text-note { font-size: 1.2rem; margin-right: 5px; }
 			.upvotes-ctrl {	display: none; }
+			.upvotes-small { 
+				& { display: inline-block; font-size: 1.2rem; color: #999999; }
+				a { margin-left: 3px; } 
+			}
 			.reddits-content { display: block; margin: 0px; }
 		}
 	}

@@ -100,6 +100,7 @@ $(function () {
         '   <a href="#" class="subject-text-note"><span class="subject-text-ico fa fa-user"></span>'+ author +'</a>' +
         '   <span class="subject-text-date subject-text-note">'+ createdAt +'<i></i></span>' +
         '   <a href="#" class="subject-text-note"><span class="subject-text-ico fa fa-comment"></span>'+ comments +' <span class="subject-text-comment">comments</span></a>' +
+        '   <small class="subject-text-note upvotes-small">'+ upvotes +'<a href="javascript:void(0);" class="glyphicon glyphicon-arrow-up"></a></small>' +
         ' </div>' +
         '</li>';
         
