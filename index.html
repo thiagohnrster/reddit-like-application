@@ -7,7 +7,7 @@
 	<!-- Loading the stylesheets -->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" href="app/styles/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="app/styles/css/style.css" />
 	
 	<!-- Loading the scripts -->
 	<script type="text/javascript" src="vendor/jquery/3.2.0/jquery.min.js"></script>
@@ -16,101 +16,81 @@
 	<title></title>
 </head>
 <body id="main">
-	
-	<!-- Navbar -->
 	<nav class="menu navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<span class="logo clearfix"><a href="#" class="navbar-brand"><img src="app/images/logo.png" title="" alt="" /></a></span>
-				<button type="button" class="menu-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="fa fa-bars"></span>
-        </button>
-        <span class="search-toggle collapsed fa fa-search"></span>
-        <span class="notification-toggle collapsed fa fa-bell" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false"><i class="badge notify">5</i></span>
-        <span class="add-post-toggle collapsed fa fa-pencil"></span>
+				<a href="javascript:void(0);" class="logo navbar-brand"></a>
+				<span class="menu-toggle navbar-toggle fa fa-bars collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1" aria-expanded="false"></span>
+				<span class="search-toggle fa fa-search collapsed"></span>
+				<span class="new-post-toggle fa fa-pencil collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-2" aria-expanded="false"></span>
 			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="navbar-left collapse navbar-collapse collapsible" id="bs-example-navbar-collapse-1">
-				<ul class="navbar-menu-list-all nav navbar-nav visible-xs hidden-md hidden-lg">
-					<li>
-						<div class="navbar-user-ctrl media">
-							<div class="media-left profile-left"><span><a href="javascript:void(0);"><img src="" title="" alt="" /></a></span></div>
-							<div class="media-body profile-right">
-								<strong>Bem vindo</strong>
-								<span><a href="javascript:void(0);">Logout</a></span>
-							</div>
-						</div>
-					</li>
-					<li><h5 class="navbar-heading text-uppercase"><span class="fa fa-list-ul navbar-list-ico"></span>Find a category</h5>
-						<ul>
-							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Product Design</a></li>
-							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">UX Theory</a></li>
-							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Case Study</a></li>
-							<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Opinion</a></li>
+			<div class="navbar-left collapsible collapse navbar-collapse" id="bs-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bars"></span></a>
+						<ul class="dropdown-menu">
+							<li class="nav-profile-hidden">
+								<ul>
+									<li class="nav-profile-header">
+										<h5><a href="javascript:void(0);"><span><img src="app/images/profile.jpg" title="" alt="" /></span> Vladimir Glasinovic</a></h5>
+										<ul>
+											<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-comments"></span> Messages <i class="badge">5</i></a></li>
+											<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-cog"></span> Settings</a></li>
+											<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-sign-out"></span> Logout</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-header">Browse by subject</li>
+							<li><a href="javascript:void(0);">Case Study</a></li>
+							<li><a href="javascript:void(0);">Opinion</a></li>
+							<li><a href="javascript:void(0);">Product Design</a></li>
+							<li><a href="javascript:void(0);">UX Theory</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<div class="navbar-left collapse navbar-collapse collapsible" id="bs-example-navbar-collapse-2">
-				<ul class="notifications">
-					<li><a href="javascript:void(0);">Notification 1</a></li>
-					<li><a href="javascript:void(0);">Notification 2</a></li>
-					<li><a href="javascript:void(0);">Notification 4</a></li>
-					<li><a href="javascript:void(0);">Notification 5</a></li>
-				</ul>
-			</div>
-			<!-- end Navbar collapse -->
-			
-			<!-- Navigation items to the left -->
-			<ul class="nav navbar-nav navbar-left visible-sm visible-md visible-lg">
-				<li class="dropdown">
-					<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navbar-menu-ico fa fa-bars"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="javascript:void(0);">Product Design</a></li>
-						<li><a href="javascript:void(0);">UX Theory</a></li>
-						<li><a href="javascript:void(0);">Case Study</a></li>
-						<li><a href="javascript:void(0);">Opinion</a></li>
-					</ul>
-				</li>
-			</ul>
-			<div class="search-box nav navbar-nav navbar-left collapsible col-sm-4 col-md-3 col-lg-3">
-				<form name="searchForm" id="searchForm">
-					<div class="input-group">
-						<span class="input-group-btn">
+			<div class="search-box navbar-left collapsible col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<form name="searchForm" action="#" method="POST" class="form-search nav navbar-nav">
+					<div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="input-group-btn">
 							<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
-						</span>
-						<input type="text" name="query" id="query" class="form-control">
+						</div>
+						<input type="search" name="query" id="query" class="form-control" />
 					</div>
 				</form>
-			</div>			
-			<!-- end Navigation items to the left -->
-
-			<!-- All user navigation items to the right -->
-			<div class="navbar-user-ctrl nav navbar-nav navbar-right visible-sm visible-md visible-lg clearfix">
-				<a href="javascript:void(0);" class="btn btn-add-post navbar-left"><span class="btn-add-post-ico fa fa-plus"></span> Add Post</a>
-				<ul class="navbar-notification-dropdown navbar-left">
-					<li class="dropdown">
-						<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span><img src="" title="" alt="" /><i class="badge notify">5</i></a></span>
-						<ul class="dropdown-menu notification-menu">
-							<li><a href="javascript:void(0);">Notification 1</a></li>
-							<li><a href="javascript:void(0);">Notification 2</a></li>
-							<li><a href="javascript:void(0);">Notification 3</a></li>
-							<li><a href="javascript:void(0);">Notification 4</a></li>
-							<li><a href="javascript:void(0);">Notification 5</a></li>
+			</div>
+			<div class="ctrl-right navbar-right">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="dropdown user-dropdown">
+						<a class="profile-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="app/images/profile.jpg" title="" alt=""><i class="user-notify">5</i></a>
+						<ul class="dropdown-menu">
+							<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-comments"></span> Messages <i class="badge">5</i></a></li>
+							<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-cog"></span> Settings</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-sign-out"></span> Logout</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<!-- end User navigation items to the right -->
-
+			<div class="btn-right navbar-right collapsible collapse navbar-collapse" id="bs-navbar-collapse-2">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="dropdown add-post-dropdown">
+						<button type="button" class="add-post-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<span class="fa fa-plus"></span> Add Post
+						</button>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header visible-xs">Add post</li>
+							<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-file-text"></span> Text</a></li>
+							<li><a href="javascript:void(0);"><span class="dropdown-menu-ico fa fa-link"></span> Link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
-	<!-- end Navbar -->
-	
 	<div class="container">
-		<div class="reddits"></div>
+		<ul class="reddits"></ul>
 	</div>
-
 </body>
 </html>
