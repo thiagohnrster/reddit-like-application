@@ -75,8 +75,8 @@ $(function () {
   //Get all JSON data function
   function getAllReddits() {
     $.getJSON('./data.json', function (data) {
-       // Show the JSON data in the console
-      console.log(data);
+      //Show the JSON data in the console
+      //console.log(data);
 
       var output;
       
@@ -89,7 +89,8 @@ $(function () {
           upvotes = item.upvotes,
           author = item.meta.author,
           title = item.meta.title,
-          url = item.meta.url;
+          url = item.meta.url,
+          isOwner = item.isOwner;
 
         output = '<li>' + 
         ' <div class="upvotes-ctrl"><a href="javascript:void(0);" class="upvotes-btn fa fa-chevron-up text-center"></a><strong class="upvotes-text text-center">'+ upvotes +'</strong></div>' +
@@ -101,15 +102,57 @@ $(function () {
         '   <span class="subject-text-date subject-text-note">'+ createdAt +'<i></i></span>' +
         '   <a href="#" class="subject-text-note"><span class="subject-text-ico fa fa-comment"></span>'+ comments +' <span class="subject-text-comment">comments</span></a>' +
         '   <small class="subject-text-note upvotes-small">'+ upvotes +'<a href="javascript:void(0);" class="glyphicon glyphicon-arrow-up"></a></small>' +
+        '   <a href="javascript:void(0);" class="subject-text-note text-owner-edit">'+ isOwner +'</a>' +
         ' </div>' +
         '</li>';
-        
+
         $('.reddits').append(output);
       });
     });
   }
+  //Search for posts function
+  function searchReddits () {
+    $('#query').on('keyup', function () {
+      var searchField = $('#query').val(),
+        regex = new RegExp(searchField, 'i'),
+        output,
+        count = 1;
+
+      $.getJSON('./data.json', function (data) {
+        $.each(data.links, function (key, val) {
+          if ((val.comments.toString().search(regex) !== -1) || (val.created_at.toString().search(regex) !== -1) || (val.upvotes.toString().search(regex) !== -1)) {
+            console.log(val);
+
+            output = '<li id='+key+'>' + 
+            ' <div class="upvotes-ctrl"><a href="javascript:void(0);" class="upvotes-btn fa fa-chevron-up text-center"></a><strong class="upvotes-text text-center">'+ val.upvotes +'</strong></div>' +
+            ' <div class="reddits-content">' +
+            '   <small class="category-small">'+ val.category +'</small><a href="#" class="subject-link">'+ val.meta.url +'</a>' +
+            '   <h3 class="subject-title">'+ val.meta.title +'</h3>' +
+            '   <strong class="subject-category subject-text-note"><span>'+ val.category +'</span></strong>' +
+            '   <a href="javascript:void(0);" class="subject-text-note"><span class="subject-text-ico fa fa-user"></span>'+ val.meta.author +'</a>' +
+            '   <span class="subject-text-date subject-text-note">'+ val.created_at +'<i></i></span>' +
+            '   <a href="javascript:void(0);" class="subject-text-note"><span class="subject-text-ico fa fa-comment"></span>'+ val.comments +' <span class="subject-text-comment">comments</span></a>' +
+            '   <small class="subject-text-note upvotes-small">'+ val.upvotes +'<a href="javascript:void(0);" class="glyphicon glyphicon-arrow-up"></a></small>' +
+            '   <span class="subject-text-note text-owner-edit">'+ val.isOwner +'</span>' +
+            ' </div>' +
+            '</li>';
+            
+            if(count%2 === 0){
+              output = '<li>No results found...</li>';
+            }
+            
+            count += 1;
+          }
+        });
+        
+        $('.reddits').html('');
+        $('.reddits').append(output);
+      });  
+    });
+  }
   //Calling the main functions
   responsiveNavigation();
+  searchReddits ();
   getAllReddits();
 }); //end document.ready
 /*jshint ignore:end*/
