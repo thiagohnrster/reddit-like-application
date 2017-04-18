@@ -1,5 +1,9 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 #main {
-  margin: 0px;
+  margin: 0px 0px 75px 0px;
   padding-top: 120px;
 }
 #main .overlay {
@@ -259,7 +263,7 @@
   padding: 8px 15px;
 }
 #main .reddits {
-  margin: 0px 0px 60px 0px;
+  margin: 0px;
   padding: 0px;
   list-style: none;
 }
@@ -349,9 +353,106 @@
   display: block;
   margin: 0px 0px 0px 68px;
 }
+#main .footer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  border: none;
+}
+#main .footer .bottom-left {
+  float: left;
+}
+#main .footer .bottom-left,
+#main .footer .bottom-right {
+  padding: 20px 0px;
+}
+#main .footer .bottom-left h5,
+#main .footer .bottom-right h5,
+#main .footer .bottom-left p,
+#main .footer .bottom-right p {
+  line-height: 16px;
+}
+#main .footer .bottom-left h5,
+#main .footer .bottom-right h5 {
+  font-weight: 600;
+  margin: 0px;
+}
+#main .footer .bottom-left p,
+#main .footer .bottom-right p {
+  margin: 0px;
+  color: #999999;
+}
+#main .footer .bottom-left .logo {
+  float: left;
+  display: inline-block;
+  width: 38px;
+  height: 40px;
+  margin: 0px;
+  background: url(../../images/logo.png) left center no-repeat;
+}
+#main .footer .bottom-left .bottom-left-body {
+  display: block;
+  margin: 0px 0px 0px 50px;
+}
+#main .footer .bottom-right {
+  float: right;
+}
+#main .footer .bottom-right ul {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+#main .footer .bottom-right li {
+  float: left;
+  position: relative;
+  display: inline;
+  margin: 0px 15px 0px 0px;
+}
+#main .footer .bottom-right li:last-child {
+  margin: 0px;
+}
+#main .footer .bottom-right li > a {
+  display: block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
+#main .footer .bottom-right .menu-item > a {
+  color: #e3472f;
+}
+#main .footer .bottom-right .sm-menu-ico {
+  margin-right: 3px;
+}
+#main .footer .bottom-right .sm-facebook {
+  color: #3b5998;
+}
+#main .footer .bottom-right .sm-twitter {
+  color: #55acee;
+}
+#main .footer .bottom-right .sm-menu-item > a {
+  color: #333333;
+}
+#main .footer .bottom-right .text-copy {
+  font-size: 1.2rem;
+  color: #cbcbcb;
+  text-align: right;
+}
+#main .footer .bottom-right .text-mobile {
+  display: none;
+}
+#main .footer .footer-divider:after {
+  display: block;
+  content: '\2022';
+  color: #999999;
+}
 @media screen and (min-width: 240px) and (max-width: 767px) {
   #main {
-    margin: 0px;
+    margin: 0px 0px 64px 0px;
     padding-top: 60px;
   }
   #main .menu {
@@ -466,7 +567,7 @@
     padding: 6px 15px;
   }
   #main .reddits {
-    margin: 0px -15px 60px -15px;
+    margin: 0px -15px 0px -15px;
     padding: 0px;
   }
   #main .reddits a {
@@ -529,5 +630,56 @@
   #main .reddits .reddits-content {
     display: block;
     margin: 0px;
+  }
+  #main .footer {
+    height: 64px;
+    border-top: 1px solid #dbdbdb;
+  }
+  #main .footer .bottom-left,
+  #main .footer .bottom-right {
+    margin: 15px 0px;
+    padding: 0px;
+  }
+  #main .footer .bottom-left h5,
+  #main .footer .bottom-right h5,
+  #main .footer .bottom-left p,
+  #main .footer .bottom-right p {
+    font-size: 1.2rem;
+    line-height: 14px;
+  }
+  #main .footer .bottom-left .logo {
+    display: block;
+    width: 31px;
+    height: 33px;
+    margin: 0px auto;
+    background: url(../../images/logo@2x.png) left center no-repeat;
+    background-size: 31px;
+  }
+  #main .footer .bottom-left .bottom-left-body {
+    display: none;
+  }
+  #main .footer .bottom-right {
+    float: right;
+  }
+  #main .footer .bottom-right li > a {
+    display: block;
+    font-size: 1.2rem;
+  }
+  #main .footer .bottom-right .menu-item {
+    display: none;
+    color: #e3472f;
+  }
+  #main .footer .bottom-right .text-mobile {
+    display: block;
+    text-align: right;
+  }
+  #main .footer .bottom-right .text-mobile > a {
+    color: #e3472f;
+  }
+  #main .footer .bottom-right .sm-menu-item {
+    display: none;
+  }
+  #main .footer .footer-divider:after {
+    display: none;
   }
 }
