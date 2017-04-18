@@ -121,8 +121,6 @@ $(function () {
       $.getJSON('./data.json', function (data) {
         $.each(data.links, function (key, val) {
           if ((val.comments.toString().search(regex) !== -1) || (val.created_at.toString().search(regex) !== -1) || (val.upvotes.toString().search(regex) !== -1)) {
-            console.log(val);
-
             output = '<li id='+key+'>' + 
             ' <div class="upvotes-ctrl"><a href="javascript:void(0);" class="upvotes-btn fa fa-chevron-up text-center"></a><strong class="upvotes-text text-center">'+ val.upvotes +'</strong></div>' +
             ' <div class="reddits-content">' +
@@ -138,7 +136,7 @@ $(function () {
             '</li>';
             
             if(count%2 === 0){
-              output = '<li>No results found...</li>';
+              output = '<li><p class="subject-text-note ">No results found...</p></li>';
             }
             
             count += 1;
