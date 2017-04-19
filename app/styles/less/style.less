@@ -1,5 +1,8 @@
 html { position: relative; min-height: 100%; }
 
+// ------------------- // 
+// Estrutura principal // 
+// ------------------- //
 #main {
 	& {	margin: 0px 0px 70px 0px; padding-top: 84px; }
 	.overlay {
@@ -11,6 +14,7 @@ html { position: relative; min-height: 100%; }
 		opacity: 0.5;
 		background: #333333;
 	}
+	// Menu
 	.menu {
 		& {
 			height: 71px;
@@ -237,6 +241,7 @@ html { position: relative; min-height: 100%; }
 			}
 		}
 	}
+	// Sorting bar
 	.filters {
 		& {
 			margin-bottom: 0px 0px 10px 0px;
@@ -259,6 +264,7 @@ html { position: relative; min-height: 100%; }
 		}
 		.sortby-text { color: #999999; }
 	}
+	// Contents / Reddits
 	.reddits {
 		& {
 			margin: 0px 0px 15px 0px;
@@ -340,6 +346,7 @@ html { position: relative; min-height: 100%; }
 			.feedback-content > h4 { font-size: 2rem; color: #999999; margin: 0px; }
 		}
 	}
+	// Footer
 	.footer {
 		& {
 			position: absolute;
@@ -413,9 +420,13 @@ html { position: relative; min-height: 100%; }
 	}
 }
 
+// ------------------ // 
+// Small devices only // 
+// ------------------ //
 @media screen and (min-width:240px) and (max-width:767px) {
 	#main {
 		& {	margin: 0px 0px 64px 0px; padding-top: 60px; }
+		// Menu
 		.menu {
 			& { height: 50px; }
 			.logo {
@@ -498,6 +509,7 @@ html { position: relative; min-height: 100%; }
 				}
 			}
 		}
+		// Sorting bar
 		.filters {
 			& {
 				margin: 15px -15px 0px -15px;
@@ -520,6 +532,7 @@ html { position: relative; min-height: 100%; }
 			}
 			.sortby-text { color: #999999; }
 		}
+		// Contents / Reddits
 		.reddits {
 			& {	margin: 0px -15px 0px -15px;	padding: 0px; }
 			a { color: #e3472f; }
@@ -559,6 +572,7 @@ html { position: relative; min-height: 100%; }
 				.feedback-content > h4 { font-size: 1.2rem; }
 			}
 		}
+		// Footer
 		.footer {
 			& { height: 64px;	border-top: 1px solid #dbdbdb; }
 			.bottom-left, 
