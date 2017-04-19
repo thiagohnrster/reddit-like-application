@@ -1,7 +1,7 @@
 html { position: relative; min-height: 100%; }
 
 #main {
-	& {	margin: 0px 0px 75px 0px; padding-top: 120px; }
+	& {	margin: 0px 0px 70px 0px; padding-top: 84px; }
 	.overlay {
 		position: fixed;
 		top: 0px;
@@ -237,9 +237,31 @@ html { position: relative; min-height: 100%; }
 			}
 		}
 	}
+	.filters {
+		& {
+			margin-bottom: 0px 0px 10px 0px;
+			padding: 0px;
+			border: none;
+		}
+		& > span {
+			display: inline-block;
+			font-size: 1.4rem;
+			margin: 0px 15px 0px 0px;
+			padding: 15px 0px;
+		}
+		& > span:last-child { margin: 0px; }
+		.order-list { color: #e3472f;  cursor: pointer; }
+		.order-list > i {
+			display: inline-block;
+			float: right;
+			line-height: 20px;
+			margin-left: 5px;
+		}
+		.sortby-text { color: #999999; }
+	}
 	.reddits {
 		& {
-			margin: 0px;
+			margin: 0px 0px 15px 0px;
 			padding: 0px;
 			list-style: none;
 		}
@@ -251,6 +273,10 @@ html { position: relative; min-height: 100%; }
 			border: none; 
 		}
 		li:last-child { margin: 0px; }
+		.category-ux_ui-bg > span { background: #00bbff; }
+		.category-case_study-bg > span { background: #f4973c; }
+		.category-product_design-bg > span { background: #00e2ad; }
+		.category-discussion-bg > span { background: #4271d6; }
 		.category-small { display: none; }
 		.subject-link {
 			display: block;
@@ -259,7 +285,7 @@ html { position: relative; min-height: 100%; }
 			text-decoration: none;
 			text-transform: uppercase;
 		}
-		.subject-title { margin: 0px 0px 10px 0px; }
+		.subject-title { font-weight: 100; margin: 0px 0px 10px 0px; }
 		.subject-category {
 			& {
 				display: inline-block;
@@ -274,7 +300,6 @@ html { position: relative; min-height: 100%; }
 				line-height: 16px;
 				padding: 5px 15px;
 				border-radius: 34px;
-				background: #333333;
 			}
 		}
 		.subject-text-date { 
@@ -309,6 +334,11 @@ html { position: relative; min-height: 100%; }
 		}
 		.upvotes-small { display: none; }
 		.reddits-content { display: block; margin: 0px 0px 0px 68px; }
+		.panel-results-feedback {
+			& { border-radius: 3px; background: #f5f5f5; }
+			.feedback-content { padding: 15px; }
+			.feedback-content > h4 { font-size: 2rem; color: #999999; margin: 0px; }
+		}
 	}
 	.footer {
 		& {
@@ -468,6 +498,28 @@ html { position: relative; min-height: 100%; }
 				}
 			}
 		}
+		.filters {
+			& {
+				margin: 15px -15px 0px -15px;
+				padding: 0px 15px;
+				border-bottom: 1px solid #dbdbdb;
+			}
+			& > span {
+				display: inline-block;
+				font-size: 1.2rem;
+				margin: 0px 10px 0px 0px;
+				padding: 5px 0px;
+			}
+			& > span:last-child { margin: 0px; }
+			.order-list { color: #e3472f;  cursor: pointer; }
+			.order-list > i {
+				display: inline-block;
+				float: right;
+				line-height: 16px;
+				margin-left: 5px;
+			}
+			.sortby-text { color: #999999; }
+		}
 		.reddits {
 			& {	margin: 0px -15px 0px -15px;	padding: 0px; }
 			a { color: #e3472f; }
@@ -483,8 +535,12 @@ html { position: relative; min-height: 100%; }
 				content: '/'; 
 				margin: 0px 5px;
 			}
+			.category-ux_ui-bg > span,
+			.category-case_study-bg > span,
+			.category-product_design-bg > span,
+			.category-discussion-bg > span { background: none; }
 			.subject-link {	display: inline-block; font-size: 1rem; }
-			.subject-title { font-size: 1.4rem; margin: 0px; }
+			.subject-title { font-size: 1.4rem; font-weight: 600; margin: 0px; }
 			.subject-category { display: none; }
 			.subject-text-ico { font-size: 1.2rem; margin-right: 3px; }
 			.subject-text-date { 
@@ -498,6 +554,10 @@ html { position: relative; min-height: 100%; }
 				a { margin-left: 3px; } 
 			}
 			.reddits-content { display: block; margin: 0px; }
+			.panel-results-feedback {
+				.feedback-content { padding: 10px 12px; }
+				.feedback-content > h4 { font-size: 1.2rem; }
+			}
 		}
 		.footer {
 			& { height: 64px;	border-top: 1px solid #dbdbdb; }

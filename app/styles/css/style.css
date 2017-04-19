@@ -3,8 +3,8 @@ html {
   min-height: 100%;
 }
 #main {
-  margin: 0px 0px 75px 0px;
-  padding-top: 120px;
+  margin: 0px 0px 70px 0px;
+  padding-top: 84px;
 }
 #main .overlay {
   position: fixed;
@@ -262,8 +262,35 @@ html {
   margin: 0px;
   padding: 8px 15px;
 }
-#main .reddits {
+#main .filters {
+  margin-bottom: 0px 0px 10px 0px;
+  padding: 0px;
+  border: none;
+}
+#main .filters > span {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0px 15px 0px 0px;
+  padding: 15px 0px;
+}
+#main .filters > span:last-child {
   margin: 0px;
+}
+#main .filters .order-list {
+  color: #e3472f;
+  cursor: pointer;
+}
+#main .filters .order-list > i {
+  display: inline-block;
+  float: right;
+  line-height: 20px;
+  margin-left: 5px;
+}
+#main .filters .sortby-text {
+  color: #999999;
+}
+#main .reddits {
+  margin: 0px 0px 15px 0px;
   padding: 0px;
   list-style: none;
 }
@@ -279,6 +306,18 @@ html {
 #main .reddits li:last-child {
   margin: 0px;
 }
+#main .reddits .category-ux_ui-bg > span {
+  background: #00bbff;
+}
+#main .reddits .category-case_study-bg > span {
+  background: #f4973c;
+}
+#main .reddits .category-product_design-bg > span {
+  background: #00e2ad;
+}
+#main .reddits .category-discussion-bg > span {
+  background: #4271d6;
+}
 #main .reddits .category-small {
   display: none;
 }
@@ -290,6 +329,7 @@ html {
   text-transform: uppercase;
 }
 #main .reddits .subject-title {
+  font-weight: 100;
   margin: 0px 0px 10px 0px;
 }
 #main .reddits .subject-category {
@@ -305,7 +345,6 @@ html {
   line-height: 16px;
   padding: 5px 15px;
   border-radius: 34px;
-  background: #333333;
 }
 #main .reddits .subject-text-date {
   color: #999999;
@@ -352,6 +391,18 @@ html {
 #main .reddits .reddits-content {
   display: block;
   margin: 0px 0px 0px 68px;
+}
+#main .reddits .panel-results-feedback {
+  border-radius: 3px;
+  background: #f5f5f5;
+}
+#main .reddits .panel-results-feedback .feedback-content {
+  padding: 15px;
+}
+#main .reddits .panel-results-feedback .feedback-content > h4 {
+  font-size: 2rem;
+  color: #999999;
+  margin: 0px;
 }
 #main .footer {
   position: absolute;
@@ -566,6 +617,33 @@ html {
   #main .menu .nav-profile-hidden .nav-profile-header ul > li a {
     padding: 6px 15px;
   }
+  #main .filters {
+    margin: 15px -15px 0px -15px;
+    padding: 0px 15px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  #main .filters > span {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0px 10px 0px 0px;
+    padding: 5px 0px;
+  }
+  #main .filters > span:last-child {
+    margin: 0px;
+  }
+  #main .filters .order-list {
+    color: #e3472f;
+    cursor: pointer;
+  }
+  #main .filters .order-list > i {
+    display: inline-block;
+    float: right;
+    line-height: 16px;
+    margin-left: 5px;
+  }
+  #main .filters .sortby-text {
+    color: #999999;
+  }
   #main .reddits {
     margin: 0px -15px 0px -15px;
     padding: 0px;
@@ -591,12 +669,19 @@ html {
     content: '/';
     margin: 0px 5px;
   }
+  #main .reddits .category-ux_ui-bg > span,
+  #main .reddits .category-case_study-bg > span,
+  #main .reddits .category-product_design-bg > span,
+  #main .reddits .category-discussion-bg > span {
+    background: none;
+  }
   #main .reddits .subject-link {
     display: inline-block;
     font-size: 1rem;
   }
   #main .reddits .subject-title {
     font-size: 1.4rem;
+    font-weight: 600;
     margin: 0px;
   }
   #main .reddits .subject-category {
@@ -630,6 +715,12 @@ html {
   #main .reddits .reddits-content {
     display: block;
     margin: 0px;
+  }
+  #main .reddits .panel-results-feedback .feedback-content {
+    padding: 10px 12px;
+  }
+  #main .reddits .panel-results-feedback .feedback-content > h4 {
+    font-size: 1.2rem;
   }
   #main .footer {
     height: 64px;

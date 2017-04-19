@@ -16,6 +16,8 @@
 	<title></title>
 </head>
 <body id="main">
+	
+	<!-- Navbar -->
 	<nav class="menu navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -56,7 +58,7 @@
 						<div class="input-group-btn">
 							<button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
 						</div>
-						<input type="search" name="query" id="query" class="form-control" />
+						<input type="search" autocomplete="off" name="query" id="query" class="form-control" />
 					</div>
 				</form>
 			</div>
@@ -89,9 +91,21 @@
 			</div>
 		</div>
 	</nav>
+	<!-- end Navbar -->
+
+	<!-- Content -->
 	<div class="container">
+		<div class="filters">
+			<span class="sortby-text">Sort by:</span>
+			<span class="order-list list-pop">Popularity <i class="fa fa-caret-down"></i></span>
+			<span class="order-list list-comments">Comments <i class="fa fa-caret-down"></i></span>
+			<span class="order-list list-date">Date <i class="fa fa-caret-down"></i></span>
+		</div>
 		<ul class="reddits"></ul>
 	</div>
+	<!-- end Content -->
+	
+	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
 			<div class="bottom-left">
@@ -115,5 +129,7 @@
 			</div>
 		</div>
 	</footer>
+	<!-- end Footer -->
+
 </body>
 </html>
