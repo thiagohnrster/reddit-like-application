@@ -12,4 +12,4 @@ de comentários.
 
 ### Como rodar a aplicação
 Para rodar é necessário algum servidor (pois boa barte da aplicação utiliza Ajax para consumir os dados do arquivo JSON) ou ter o Node instalado para que possa baixar o http-server via linha 
-de comando. Para baixar o http-server, basta digitar via prompt    npm install http-server -g
+de comando. Para baixar o http-server, basta digitar via prompt <pre><code>npm install http-server -g</code></pre>
