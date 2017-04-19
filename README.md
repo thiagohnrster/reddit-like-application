@@ -11,5 +11,5 @@ de comentários.
 - Linters de código (jslint e jshint)
 
 ### Como rodar a aplicação
-Para rodar é necessário algum servidor (pois boa barte da aplicação utiliza Ajax para consumir os dados do arquivo JSON) ou ter o Node instalado para baixar o 
+Para rodar é necessário algum servidor (boa barte da aplicação utiliza Ajax para consumir os dados do arquivo JSON) ou ter o Node instalado para baixar o 
 <a href="https://www.npmjs.com/package/http-server">http-server</a> via linha de comando (npm).
