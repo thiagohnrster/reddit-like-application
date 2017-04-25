@@ -149,7 +149,7 @@ $(function () {
         });
     }
 
-    //Sort by ascending order function
+    //Sort by ascending function
     function orderASCList(t) {
         function sortASC(a, b) {
             return ($(b).data(t)) > ($(a).data(t))
@@ -160,7 +160,7 @@ $(function () {
         $('.reddits > li').sort(sortASC).appendTo('.reddits');
     }
 
-    //Sort by descending order function
+    //Sort by descending function
     function orderDESCList(t) {
         function sortDESC(a, b) {
             return ($(b).data(t)) < ($(a).data(t))
@@ -171,51 +171,62 @@ $(function () {
         $(".reddits > li").sort(sortDESC).appendTo('.reddits');
     }
 
-    //Sorting function
-    function sortable(listType) {
-        $('.list-pop').click(function () {
-            if (listType === 'upvotes') {
-                var el = $('.list-pop > i');
+    //Sorting list by 'popularity', 'comments' and 'date' function
+    function orderList(listType) {
+        if (listType === 'upvotes') {
+            var listPop = $('.list-pop > i');
 
-                $(el).toggleClass('fa-caret-down');
-                $(el).toggleClass('fa-caret-up');
+            $(listPop).toggleClass('fa-caret-down');
+            $(listPop).toggleClass('fa-caret-up');
 
-                if ($(el).hasClass('fa-caret-down')) {
-                    orderASCList(listType);
-                } else {
-                    orderDESCList(listType);
-                }
+            if ($(listPop).hasClass('fa-caret-down')) {
+                orderASCList(listType);
+            } else {
+                orderDESCList(listType);
             }
-        });
+        }
 
-        $('.list-comments').click(function () {
-            if (listType === 'comments') {
-                var el = $('.list-comments > i');
+        if (listType === 'comments') {
+            var listComments = $('.list-comments > i');
 
-                $(el).toggleClass('fa-caret-down');
-                $(el).toggleClass('fa-caret-up');
+            $(listComments).toggleClass('fa-caret-down');
+            $(listComments).toggleClass('fa-caret-up');
 
-                if ($(el).hasClass('fa-caret-down')) {
-                    orderASCList(listType);
-                } else {
-                    orderDESCList(listType);
-                }
+            if ($(listComments).hasClass('fa-caret-down')) {
+                orderASCList(listType);
+            } else {
+                orderDESCList(listType);
             }
-        });
-
-        $('.list-date').click(function () {
+        } else {
             if (listType === 'created-at') {
-                var elem = $('.list-date > i');
+                var listDate = $('.list-date > i');
 
                 $('.list-date > i').toggleClass('fa-caret-down');
                 $('.list-date > i').toggleClass('fa-caret-up');
 
-                if ($(elem).hasClass('fa-caret-down')) {
+                if ($(listDate).hasClass('fa-caret-down')) {
                     orderASCList(listType);
                 } else {
                     orderDESCList(listType);
                 }
             }
+        }
+
+        return;
+    }
+
+    //Sorting list on 'click' event function
+    function sortable() {
+        $('.list-pop').click(function () {
+            orderList('upvotes');
+        });
+
+        $('.list-comments').click(function () {
+            orderList('comments');
+        });
+
+        $('.list-date').click(function () {
+            orderList('created-at');
         });
     }
 
